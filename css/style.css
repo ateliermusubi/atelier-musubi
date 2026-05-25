@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+/* ========================================
+   ベース設定（全体のリセットと基本カラー）
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 深いネイビーを背景に、文字を白に */
+    background-color: #0b101e;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+/* 見出し用の優雅なフォント（明朝体で高級感を演出） */
+h1, h2, h3 {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-weight: normal;
+}
+
+/* ========================================
+   レイアウトの共通設定
+   ======================================== */
+main {
+    max-width: 800px; /* PCで見ても広がりすぎず、読みやすい幅に制限 */
+    margin: 0 auto;   /* 画面の中央に配置 */
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0; /* 各セクションの上下にたっぷりとした余白をとる */
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2); /* 区切り線として、うっすらとしたゴールドの線を引く */
+}
+
+.section-title {
+    color: #c5a059; /* Atelier MUSUBIのアクセントカラー（ゴールド） */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 0.1em;
+}
+
+/* ========================================
+   ヘッダー（一番上の領域）
+   ======================================== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(11, 16, 30, 0.9);
+    position: sticky; /* スクロールしても上部に追従させる */
+    top: 0;
+}
+
+.header-logo h1 {
+    font-size: 1.5rem;
+    color: #c5a059;
+}
+
+/* ========================================
+   ボタン（LINEへの導線）
+   ======================================== */
+.btn-line-header {
+    background-color: #06C755;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-line-main {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px auto 0;
+    padding: 15px 0;
+    background-color: #06C755;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s;
+}
+
+.btn-line-main:hover {
+    opacity: 0.8;
+}
+
+/* ========================================
+   Aboutセクションの装飾
+   ======================================== */
+.about-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.profile-story p {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+    color: #e0e0e0;
+    text-align: justify;
+}
+
+.profile-story .story-lead {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 1.3rem;
+    color: #c5a059;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.profile-story .story-signature {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    text-align: right;
+    font-size: 1.1rem;
+    color: #c5a059;
+    margin-top: 40px;
+}
+
+/* ========================================
+   Flowセクションの装飾
+   ======================================== */
+.flow-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.flow-step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #c5a059;
+}
+
+.step-number {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 2rem;
+    color: #c5a059;
+    font-weight: bold;
+    margin-right: 25px;
+    line-height: 1;
+}
+
+.step-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.step-content p {
+    font-size: 0.95rem;
+    color: #d0d0d0;
+}
+/* ========================================
+   お客様の声（Voice）の装飾
+   ======================================== */
+.reviews-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(197, 160, 89, 0.15);
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.review-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.review-model {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 8px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+}
+
+.review-stars {
+    color: #c5a059; /* ゴールド */
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    letter-spacing: 0.2em;
+}
+
+.review-comment {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: justify;
+}
